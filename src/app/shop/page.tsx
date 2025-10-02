@@ -98,7 +98,7 @@ export default function ShopPage() {
   // Initialize filtered products on component mount
   useEffect(() => {
     setFilteredProducts(products);
-  }, []);
+  }, [products]);
 
   // FILTER LOGIC
   const applyFilters = () => {

@@ -8,12 +8,6 @@ import {
   DrawerTrigger,
 } from "@/components/ui/drawer";
 import Image from "next/image";
-import Link from "next/link";
-
-// type Links = {
-//   name: string;
-//   href: string;
-// }[];
 
 export function DrawerDemo() {
   return (

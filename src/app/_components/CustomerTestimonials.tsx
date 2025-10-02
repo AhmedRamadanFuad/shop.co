@@ -5,6 +5,7 @@ import { ChevronLeft, ChevronRight, Star } from "lucide-react";
 const CustomerTestimonials = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isClient, setIsClient] = useState(false);
+  console.log(isClient);
 
   React.useEffect(() => {
     setIsClient(true);

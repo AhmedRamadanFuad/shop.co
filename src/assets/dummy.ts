@@ -159,31 +159,31 @@ export function applyDiscount(price: number, percent: number) {
   return Math.round(price * (1 - percent / 100));
 }
 
-const categories = ["T-shirts", "Shorts", "Shirts", "Hoodie", "Jeans"];
-const dressStyles = ["Casual", "Formal", "Party", "Gym"];
-const colors = [
-  { name: "Green", class: "bg-green-500" },
-  { name: "Red", class: "bg-red-500" },
-  { name: "Yellow", class: "bg-yellow-500" },
-  { name: "Orange", class: "bg-orange-500" },
-  { name: "Sky Blue", class: "bg-sky-500" },
-  { name: "Blue", class: "bg-blue-500" },
-  { name: "Purple", class: "bg-purple-500" },
-  { name: "Pink", class: "bg-pink-500" },
-  { name: "White", class: "bg-white border border-gray-300" },
-  { name: "Black", class: "bg-black" },
-];
-const sizes = [
-  "XX-Small",
-  "X-Small",
-  "Small",
-  "Medium",
-  "Large",
-  "X-Large",
-  "XX-Large",
-  "3X-Large",
-  "4X-Large",
-];
+// const categories = ["T-shirts", "Shorts", "Shirts", "Hoodie", "Jeans"];
+// const dressStyles = ["Casual", "Formal", "Party", "Gym"];
+// const colors = [
+//   { name: "Green", class: "bg-green-500" },
+//   { name: "Red", class: "bg-red-500" },
+//   { name: "Yellow", class: "bg-yellow-500" },
+//   { name: "Orange", class: "bg-orange-500" },
+//   { name: "Sky Blue", class: "bg-sky-500" },
+//   { name: "Blue", class: "bg-blue-500" },
+//   { name: "Purple", class: "bg-purple-500" },
+//   { name: "Pink", class: "bg-pink-500" },
+//   { name: "White", class: "bg-white border border-gray-300" },
+//   { name: "Black", class: "bg-black" },
+// ];
+// const sizes = [
+//   "XX-Small",
+//   "X-Small",
+//   "Small",
+//   "Medium",
+//   "Large",
+//   "X-Large",
+//   "XX-Large",
+//   "3X-Large",
+//   "4X-Large",
+// ];
 
 export const Newproducts = [
   {
