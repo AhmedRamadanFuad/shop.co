@@ -13,9 +13,9 @@ import { useParams } from "next/navigation";
 import { getProduct } from "@/assets/dummy";
 import ProductItem from "@/components/product-item";
 import { useDispatch } from "react-redux";
-
 import { addCartItem } from "@/redux/features/cart/cartSlice";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const ProductPage = () => {
   const dispatch = useDispatch();
@@ -175,7 +175,13 @@ const ProductPage = () => {
   };
 
   return (
-    <div className="px-5 sm:px-10">
+    <motion.section
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      viewport={{ once: true, amount: 0.2 }}
+      className="px-5 sm:px-10"
+    >
       {/* Breadcrumb */}
       <div className="container">
         <div className="flex items-center text-sm text-gray-500 mb-8">
@@ -407,7 +413,7 @@ const ProductPage = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.section>
   );
 };
 

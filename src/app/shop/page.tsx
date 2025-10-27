@@ -13,6 +13,7 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from "@/components/ui/drawer";
+import { motion } from "framer-motion";
 
 type Products = (
   | {
@@ -283,7 +284,13 @@ export default function ShopPage() {
     document.addEventListener("mouseup", handleMouseUp);
   };
   return (
-    <section className="px-5 sm:px-10 bg-white">
+    <motion.section
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      viewport={{ once: true, amount: 0.2 }}
+      className="px-5 sm:px-10 bg-white"
+    >
       <div className="container ">
         <div className="flex items-center text-sm text-accent mb-6">
           <span>Home</span>
@@ -939,6 +946,6 @@ export default function ShopPage() {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
+import { motion } from "framer-motion";
 
 const CustomerTestimonials = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -75,7 +76,13 @@ const CustomerTestimonials = () => {
   };
 
   return (
-    <section className="px-5 sm:px-10 mt-[40px] translate-y-[40px]">
+    <motion.section
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      viewport={{ once: true, amount: 0.2 }}
+      className="px-5 sm:px-10 mt-[40px] translate-y-[40px]"
+    >
       <div className="container">
         {/* Header */}
         <div className="flex items-center justify-between mb-12">
@@ -250,7 +257,7 @@ const CustomerTestimonials = () => {
           ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

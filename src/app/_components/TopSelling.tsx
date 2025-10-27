@@ -1,7 +1,15 @@
+"use client";
 import SwiperProducts from "@/components/swiper/SwiperProducts";
+import { motion } from "framer-motion";
 function TopSelling() {
   return (
-    <section className="px-5 sm:px-10">
+    <motion.section
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      viewport={{ once: true, amount: 0.2 }}
+      className="px-5 sm:px-10"
+    >
       <div className="container pt-[64px] border-t border-black/10">
         <h2 className="uppercase text-3xl sm:text-5xl mb-[55px] text-center font-bold font-oswald">
           Top Selling
@@ -13,7 +21,7 @@ function TopSelling() {
           </button>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }
 

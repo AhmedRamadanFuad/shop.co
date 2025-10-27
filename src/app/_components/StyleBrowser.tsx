@@ -1,8 +1,10 @@
+"use client";
 import Image from "next/image";
 import casualImage from "@/assets/images/casual.png";
 import formalImage from "@/assets/images/formal.png";
 import partyImage from "@/assets/images/party.png";
 import gymImage from "@/assets/images/gym.png";
+import { motion } from "framer-motion";
 
 const StyleBrowser = () => {
   const styles = [
@@ -33,7 +35,13 @@ const StyleBrowser = () => {
   ];
 
   return (
-    <section className="px-5 sm:px-10">
+    <motion.section
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      viewport={{ once: true, amount: 0.2 }}
+      className="px-5 sm:px-10"
+    >
       <div className="container">
         <div className="md:px-[64px] px-6 md:pt-[70px] pt-10 md:pb-[76px] pb-[27px] bg-secondary md:rounded-[40px] rounded-[20px]">
           {/* Header */}
@@ -96,7 +104,7 @@ const StyleBrowser = () => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

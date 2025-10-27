@@ -18,6 +18,7 @@ import {
   removeCartItem,
 } from "@/redux/features/cart/cartSlice";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 type Item = {
   id: number;
@@ -73,7 +74,13 @@ const CartPage = () => {
   }
 
   return (
-    <div className="px-5 sm:px-10">
+    <motion.section
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      viewport={{ once: true, amount: 0.2 }}
+      className="px-5 sm:px-10"
+    >
       <div className="container">
         {/* Breadcrumb */}
         <div className="h-px w-full bg-black/10 mb-6" />
@@ -252,7 +259,7 @@ const CartPage = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.section>
   );
 };
 

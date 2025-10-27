@@ -1,13 +1,21 @@
+"use client";
 import React from "react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import hero from "@/assets/images/hero.png";
 import star from "@/assets/images/black-star.png";
 import hero2 from "@/assets/images/hero2.png";
+import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <div className="bg-[#F2F0F1] px-5 sm:px-10 relative z-0 overflow-hidden pt-10 sm:pt-[100px] ">
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      viewport={{ once: true, amount: 0.2 }}
+      className="bg-[#F2F0F1] px-5 sm:px-10 relative z-0 overflow-hidden pt-10 sm:pt-[100px] "
+    >
       <div className="container h-full z-10 flex flex-col">
         {/* Left Content */}
         <div className="flex-1 max-[1333px]:flex max-[1333px]:flex-col max-[1333px]:items-center md:space-y-[48px] space-y-5 min-[1334px]:pb-[116px]">
@@ -85,7 +93,7 @@ const Hero = () => {
           />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

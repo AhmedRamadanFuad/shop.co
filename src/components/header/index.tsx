@@ -8,6 +8,7 @@ import { DrawerDemo } from "./Drawer";
 import { useSelector } from "react-redux";
 import { RootState } from "@/redux/store";
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 const links = [
   { name: "Shop", href: "/shop" },
@@ -25,7 +26,12 @@ function Header() {
   }, []);
 
   return (
-    <header>
+    <motion.header
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      viewport={{ once: true, amount: 0.2 }}
+    >
       <div className="px-5 sm:px-10 bg-black">
         <div className="w-full container text-white text-xs sm:text-sm text-center py-2 flex justify-center items-center relative">
           <p className="">
@@ -88,7 +94,7 @@ function Header() {
           </div>
         </nav>
       </div>
-    </header>
+    </motion.header>
   );
 }
 
